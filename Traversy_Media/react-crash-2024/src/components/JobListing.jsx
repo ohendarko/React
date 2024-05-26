@@ -26,9 +26,9 @@ const JobListing = ({ job }) => {
           {description}
         </div>
 
-        <buttton onClick={() => setShowFullDescription((prevState) => !prevState)} className="text-indigo-500 mb-5 hover:text-indigo-600 pointer">
+        <button onClick={() => setShowFullDescription((prevState) => !prevState)} className="text-indigo-500 mb-5 hover:text-indigo-600 pointer">
           {showFullDescription ? 'Less' : 'More'}
-        </buttton>
+        </button>
 
         <h3 className="text-indigo-500 mb-2">{job.salary}</h3>
 
@@ -40,7 +40,7 @@ const JobListing = ({ job }) => {
             {job.location}
           </div>
           <Link
-            to={`job/${job.id}`}
+            to={`/jobs/${job.id}`}
             className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
           >
             Read More
