@@ -103,6 +103,11 @@ body {
   padding: 0 10px;
 }
 
+.fact-list > li::marker {
+  color: rgb(57, 57, 210);
+  font-size: 20px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
