@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,123 @@
 
 .read-the-docs {
   color: #888;
+} */
+body {
+  padding: 70px 0px 0px 0px;
+  margin: 0px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.nav-image {
+  height: 60px;
+  width: auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  padding: 0px 10px;
+  background-color: white;
+}
+
+.photogrid {
+  display: flex;
+  justify-content: center;
+  max-height: 350px;
+  max-width: 2000px;
+  min-width: 0px;
+}
+
+.photogrid-section {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  flex-shrink: 1;
+}
+
+.align-top,
+.align-bottom,
+.middle {
+  align-content: center;
+}
+
+.align-top {
+  justify-content: flex-start;
+}
+
+.align-bottom {
+  justify-content: flex-end;
+}
+
+.middle {
+  justify-content: center;
+}
+
+.photogrid-item {
+  margin-block: 5px;
+  border-radius: 10px;
+  max-width: 100px;
+  object-fit: cover;
+  max-height: 150px;
+}
+
+.hero {
+  margin-top: 50px;
+  padding: 0px 20px;
+}
+.hero > p {
+  margin-right: 50px;
+}
+
+.hero > h1 {
+  font-size: 2.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text-section {
+  display: flex;
+}
+
+.hero-text {
+  flex: 2
+}
+
+.blank-text {
+  flex: 1;
+}
+
+.card-container {
+  display: flex;
+  padding: 0px 20px;
+  margin-block: 50px;
+}
+
+.card {
+  width: 180px;
+  background-color: rgb(238, 236, 236);
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.card > p {
+  margin-block: 5px;
+}
+
+.card-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gray {
+  color: gray;
+}
+
+.bold {
+  font-weight: bold;
 }
