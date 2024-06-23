@@ -6,8 +6,8 @@ const Header = () => {
     <div>
       <header className='header'>
         <img src={Logo} alt="meme-logo" className='logo' />
-        <p className='header-text-left'>Meme Generator</p>
-        <p className='header-text-right'>React Course - Project 3</p>
+        <h2 className='header-text-left'>Meme Generator</h2>
+        <p className='header-text-right'><small>React Course - Project 3</small></p>
       </header>
     </div>
   )

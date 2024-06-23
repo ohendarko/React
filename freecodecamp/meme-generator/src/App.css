@@ -53,8 +53,9 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgb(102, 62, 142);
+  background: linear-gradient(90deg, #3a014e 10.18%, #a64d05 100%);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   color: white;
   padding: 5px;
@@ -68,11 +69,72 @@ body {
 .header-text-left {
   margin-right: auto;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .header-text-right {
-  margin-right: 30px;
+  margin: 5px 30px;
 }
+
+/*Body*/
+.body {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.texts-box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 50px;
+  flex: 1;
+  width: 370px;
+}
+
+input {
+  padding: 7px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(209, 206, 206);
+  border-radius: 5px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  text-indent: 5px;
+}
+
+input:focus {
+  border: 2px solid rgb(73, 4, 81);
+}
+
+.get-image {
+  text-align: center;
+  background: linear-gradient(90deg, #580477 1.18%, #9027b9 100%);
+  color: white;
+  width: 100%;
+  padding: 15px;
+  margin: 25px 50px;
+  border: none;
+  border-radius: 10px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.generated {
+  max-width: 1000px;
+  margin: 20px 0;
+}
+
+/*End of body*/
 
 /*Footer*/
 
@@ -82,7 +144,7 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  background-color: rgb(102, 62, 142);
+  background: linear-gradient(90deg, #4e036a 40.18%, #a45e14 100%);
   color: white;
   position: fixed;
   bottom: 0;
