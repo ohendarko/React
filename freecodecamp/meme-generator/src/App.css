@@ -1,0 +1,140 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  height: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(102, 62, 142);
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 5px;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 30px;
+}
+
+.header-text-left {
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.header-text-right {
+  margin-right: 30px;
+}
+
+/*Footer*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: rgb(102, 62, 142);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.footer > p {
+  margin: 2px;
+}
+
+.footer-content {
+  max-width: 1200px; /* Max width of the content */
+  margin: 0; /* Center align the content horizontally */
+}
+
+.social-media-links {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center align the items */
+}
+
+.social-media-links li {
+  margin: 0 10px; /* Margin between each icon */
+}
+
+.social-media-links a {
+  color: #fff; /* Icon color */
+  font-size: 24px; /* Icon size */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.social-media-links a:hover {
+  color: #6bb9eb; /* Change icon color on hover */
+}
+
+.social-media-links svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #fff;
+  transition: fill 0.3s;
+}
+
+.social-media-links a:hover svg {
+  fill: #1da1f2;
+}
+
+.footer-text {
+  margin-right: 10px;
+}
+/*End of footer*/
