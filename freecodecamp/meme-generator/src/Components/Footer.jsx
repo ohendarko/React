@@ -3,9 +3,9 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className='footer'>
-      <p className='footer-text'><small>Cloned by: Kwadwo Ohene Darko</small></p>
-      <div class="footer-content">
-      <ul class="social-media-links">
+      <p className='footer-text'><small>Built by: Kwadwo Ohene Darko</small></p>
+      <div className="footer-content">
+      <ul className="social-media-links">
         <li>
         <a href="https://x.com/ohene_kwadwo" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">

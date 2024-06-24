@@ -59,6 +59,7 @@ body {
   align-items: center;
   color: white;
   padding: 5px;
+  /* box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.742); */
 }
 
 .logo {
@@ -127,11 +128,33 @@ input:focus {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background 5s ease-in-out;
+}
+
+.get-image:hover {
+  background: linear-gradient(30deg, #580477 41.18%, #c45405 100%);
+}
+
+button:active {
+  opacity: 0.6;
+  font-size: 1.18rem;
+  padding: 14px;
 }
 
 .generated {
   max-width: 1000px;
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.meme-image {
+  margin: 10px 50px;
+  width: 100%;
+  flex: 1;
+  height: auto;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 
 /*End of body*/
