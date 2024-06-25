@@ -59,6 +59,7 @@ body {
   align-items: center;
   color: white;
   padding: 5px;
+  z-index: 2000;
   /* box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.742); */
 }
 
@@ -146,6 +147,7 @@ button:active {
   margin: 20px 0;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .meme-image {
@@ -155,6 +157,35 @@ button:active {
   height: auto;
   padding: 0 50px;
   box-sizing: border-box;
+  z-index: -2;
+}
+
+.meme-text-top,
+.meme-text-bottom {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 
+    2px 2px 0 #000, 
+   -2px -2px 0 #000,
+    2px -2px 0 #000,
+   -2px 2px 0 #000,
+    2px 0 0 #000,
+   -2px 0 0 #000,
+    0 2px 0 #000,
+    0 -2px 0 #000;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.meme-text-top {
+  top: 0px;
+}
+
+.meme-text-bottom {
+  bottom: 0px;
 }
 
 /*End of body*/
@@ -163,7 +194,7 @@ button:active {
 
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -174,10 +205,12 @@ button:active {
   right: 0;
   left: 0;
   padding: 10px;
+  z-index: 2000;
 }
 
 .footer > p {
-  margin: 2px;
+  margin: 0;
+  margin-right: 40px;
 }
 
 .footer-content {
