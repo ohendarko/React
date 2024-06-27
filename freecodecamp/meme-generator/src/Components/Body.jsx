@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import html2canvas from 'html2canvas';
 
 const Body = () => {
   const [meme, setMeme] = useState({
@@ -9,6 +10,8 @@ const Body = () => {
   const [allMemes, setAllMemes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const memeRef = useRef(null);
+  const downloadLinkRef = useRef(null);
 
   useEffect(() => {
     const apiUrl = `https://api.imgflip.com/get_memes`;
@@ -47,6 +50,16 @@ const Body = () => {
     }));
   }
 
+  const downloadMeme = () => {
+    html2canvas(memeRef.current).then(canvas => {
+      const url = canvas.toDataURL('image/png');
+      const link = downloadLinkRef.current;
+      link.href = url;
+      link.download = 'meme.png';
+      link.click();
+    });
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -79,12 +92,18 @@ const Body = () => {
           />
         </div>
         <button className='get-image' onClick={getMemeImage}>Get a new image</button>
+        
       </div>
-      <div className='generated'>
-        <img src={meme.randomImage} className='meme-image' alt="Random meme" />
+      <div className='generated' ref={memeRef} style={{ position: 'relative', textAlign: 'center' }}>
+        <img src={meme.randomImage} className='meme-image' alt="Random meme"/>
         <h2 className='meme-text-top'>{meme.topText}</h2>
         <h2 className='meme-text-bottom'>{meme.bottomText}</h2>
       </div>
+      <div>
+        <button className='download-meme' onClick={downloadMeme}>Download Meme</button>
+        <a ref={downloadLinkRef} style={{ display: 'none' }}>Download</a>
+      </div>
+      
     </main>
   );
 }
