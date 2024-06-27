@@ -112,7 +112,6 @@ const Body = () => {
         <button className='download-meme' onClick={downloadMeme}>Download Meme</button>
         <a ref={downloadLinkRef} style={{ display: 'none' }}>Download</a>
       </div>
-      
     </main>
   );
 }
