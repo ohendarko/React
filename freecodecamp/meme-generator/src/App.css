@@ -175,7 +175,6 @@ button:active {
   height: auto;
   padding: 0 50px;
   box-sizing: border-box;
-  z-index: -2;
   align-self: center;
 }
 
@@ -198,15 +197,15 @@ button:active {
     0 2px 0 #000,
     0 -2px 0 #000;
     margin: 0;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .meme-text-top {
-  top: 5px;
+  top: 10px;
 }
 
 .meme-text-bottom {
-  bottom: 5px;
+  bottom: 10px;
 }
 
 /*End of body*/

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import html2canvas from 'html2canvas';
+import {toPng} from 'html-to-image';
 
 const Body = () => {
   const [meme, setMeme] = useState({
@@ -51,13 +51,22 @@ const Body = () => {
   }
 
   const downloadMeme = () => {
-    html2canvas(memeRef.current).then(canvas => {
-      const url = canvas.toDataURL('image/png');
-      const link = downloadLinkRef.current;
-      link.href = url;
-      link.download = 'meme.png';
-      link.click();
-    });
+    if (!meme.randomImage) {
+      console.error('No image available to download');
+      return;
+    }
+    toPng(memeRef.current)
+      .then((dataUrl) => {
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'meme.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      })
+      .catch((error) => {
+        console.error('Error converting meme image:', error);
+      });
   };
 
   if (loading) {
