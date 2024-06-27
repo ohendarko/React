@@ -165,7 +165,9 @@ button:active {
   position: absolute;
   color: white;
   text-transform: uppercase;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 5vw;
+  text-align: center;
   font-family: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-shadow: 
     2px 2px 0 #000, 
@@ -181,11 +183,11 @@ button:active {
 }
 
 .meme-text-top {
-  top: 0px;
+  top: 5px;
 }
 
 .meme-text-bottom {
-  bottom: 0px;
+  bottom: 5px;
 }
 
 /*End of body*/
