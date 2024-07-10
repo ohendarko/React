@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { toPng } from 'html-to-image';
-import backgroundImage from '../assets/images/background_low-res.png';
 
 const Body = () => {
   const [meme, setMeme] = useState({
