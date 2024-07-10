@@ -48,13 +48,16 @@ body {
   justify-content: center;
   flex-direction: column;
   align-content: center;
-}
-
-#root {
   background-image: url('./assets/images/background_low-res.png');
   background-size: cover;
   background-position: center;
 }
+
+/* #root {
+  background-image: url('./assets/images/background_low-res.png');
+  background-size: cover;
+  background-position: center;
+} */
 
 .header {
   height: auto;
